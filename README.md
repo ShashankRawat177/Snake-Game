@@ -39,7 +39,7 @@ This is a classic Snake Game implemented in C++. The game features a dynamically
    ```sh
    ./snake
    ```
-The pre-compiled executable file is uploaded in the release section 
+The pre-compiled executable file is uploaded in the release section.
 
 ## Controls
 
