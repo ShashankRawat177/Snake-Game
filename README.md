@@ -2,9 +2,9 @@
 
 ## Lab Group Name - Dynamic Programmers
 Members :
-- Shashank Rawat - 202401183.
-- Shreyav Kumar - 202401206.
-- Anshuman Bhagat - 202301170.
+- Shashank Rawat - 202401183(G3)
+- Shreyav Kumar - 202401206(G3)
+- Anshuman Bhagat - 202301170(G2)
 
 ## Description
 
