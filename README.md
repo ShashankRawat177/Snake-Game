@@ -1,5 +1,11 @@
 # Snake Game
 
+## Lab Group Name - Dynamic Programmers
+Members :
+Shashank Rawat - 202401183
+Shreyav Kumar - 202401206
+Anshuman Bhagat - 202301170
+
 ## Description
 
 This is a classic Snake Game implemented in C++. The game features a dynamically growing snake that consumes different types of fruits to earn points. Special fruits provide unique effects, such as increasing or decreasing the snake's length.
