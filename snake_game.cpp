@@ -66,13 +66,13 @@ void SnakeGame::startup() {
 
 void SnakeGame::MainMenu() {
     cout << "\033[2J\033[H"; // Clears screen
-    cout << " _______  __    _  _______  ___   _  _______ " << endl;
-    cout << "|       ||  |  | ||   _   ||   | | ||       |" << endl;
-    cout << "|  _____||   |_| ||  |_|  ||   |_| ||    ___|" << endl;
-    cout << "| |_____ |       ||       ||      _||   |___ " << endl;
-    cout << "|_____  ||  _    ||       ||     |_ |    ___|" << endl;
-    cout << " _____| || | |   ||   _   ||    _  ||   |___ " << endl;
-    cout << "|_______||_|  |__||__| |__||___| |_||_______|" << endl;
+    cout << "\033[32m _______  __    _  _______  ___   _  _______ \033[0m" << endl;
+    cout << "\033[32m|       ||  |  | ||   _   ||   | | ||       |\033[0m" << endl;
+    cout << "\033[32m|  _____||   |_| ||  |_|  ||   |_| ||    ___|\033[0m" << endl;
+    cout << "\033[32m| |_____ |       ||       ||      _||   |___ \033[0m" << endl;
+    cout << "\033[32m|_____  ||  _    ||       ||     |_ |    ___|\033[0m" << endl;
+    cout << "\033[32m _____| || | |   ||   _   ||    _  ||   |___ \033[0m" << endl;
+    cout << "\033[32m|_______||_|  |__||__| |__||___| |_||_______|\033[0m" << endl;
 
     cout << "\n=========== SNAKE GAME ===========\n";
     cout << "1. Start Game\n";
@@ -92,9 +92,9 @@ void SnakeGame::MainMenu() {
         cout << "\033[2J\033[H";
         cout << "========== HOW TO PLAY ==========\n";
         cout << "Use 'W' 'A' 'S' 'D' to move the snake.\n";
-        cout << "Eat 'F' (Normal Fruit) for +10 points.\n";
-        cout << "Eat 'S' (Special Fruit A) for +40 points & -1 length (10% chance).\n";
-        cout << "Eat 'G' (Special Fruit B) for +60 points & +2 length (3% chance).\n";
+        cout << "Eat \033[33m'F'\033[0m (Normal Fruit) for +10 points.\n";
+        cout << "Eat \033[34m'S'\033[0m (Special Fruit A) for +40 points & -1 length (10% chance).\n";
+        cout << "Eat \033[31m'G'\033[0m (Special Fruit B) for +60 points & +2 length (3% chance).\n";
         cout << "Avoid hitting walls and yourself!\n";
         cout << "Press 'X' anytime to quit.\n";
         cout << "==================================\n";
@@ -121,15 +121,15 @@ void SnakeGame::draw() {
     for (int i = 1; i < GridLength-1; i++) {
         for (int j = 0; j < GridWidth; j++) {
             if (j == 0 || j == GridWidth-1) cout << "|";
-            else if (j == x && i == y) cout << "O"; //Head
-            else if (j == fruitx && i == fruity) cout << "F"; //Fruit
-            else if (hasSpecialA && j == specialAx && i == specialAy) cout << "S";
-            else if (hasSpecialB && j == specialBx && i == specialBy) cout << "G";
+            else if (j == x && i == y) cout << "\033[32mO\033[0m"; //Head
+            else if (j == fruitx && i == fruity) cout << "\033[33mF\033[0m"; //Fruit
+            else if (hasSpecialA && j == specialAx && i == specialAy) cout << "\033[34mS\033[0m";
+            else if (hasSpecialB && j == specialBx && i == specialBy) cout << "\033[31mG\033[0m";
             else {
                 bool printTail = false;
                 for (int k = 0; k < nTail; k++) {
                     if (TailX[k] == j && TailY[k] == i) {
-                        cout << "o";
+                        cout << "\033[32mo\033[0m";
                         printTail = true;
                         break;
                     }
