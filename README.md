@@ -38,6 +38,8 @@ g++ -o snake SnakeGame.cpp -std=c++11
 ./snake
 ```
 
+The pre-compiled executable is uploaded on the release section of the page.
+
 ## Controls
 
 - `W` - Move Up
