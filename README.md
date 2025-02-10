@@ -48,6 +48,8 @@ This is a classic Snake Game implemented in C++. The game features a dynamically
 - `D` - Move Right
 - `X` - Quit the Game
 
+The pre-compiled executable file is uploaded in the release section 
+
 ## How to Play
 
 - Move the snake around the grid to eat fruits and gain points.
