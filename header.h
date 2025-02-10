@@ -9,6 +9,8 @@
 #include <ctime>
 #include <string>
 
+using namespace std;
+
 class SnakeGame {
 private:
     bool isGameOver;
@@ -20,8 +22,8 @@ private:
     int nTail;
     enum Direction{STOP = 0, UP, DOWN, LEFT, RIGHT};
     Direction dir;
-    std::mt19937 rng;  // Mersenne Twister RNG
-    std::uniform_int_distribution<int> distX, distY, distChance;  // Distributions
+    mt19937 rng;  // Mersenne Twister RNG
+    uniform_int_distribution<int> distX, distY, distChance;  // Distributions
 
 public:
     SnakeGame();
