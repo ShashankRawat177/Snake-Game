@@ -1,4 +1,3 @@
-# Snake-Game
 # Snake Game
 
 ## Description
@@ -55,16 +54,3 @@ This is a classic Snake Game implemented in C++. The game features a dynamically
 - **C++** (Standard Library for I/O and Randomization)
 - **ANSI Escape Codes** (For Console Graphics)
 - **Multi-threading** (For Delays and Sleep Functions)
-
-## Contributing
-
-Feel free to submit issues or pull requests to improve the game!
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For questions or suggestions, contact [[your-email@example.com](mailto\:your-email@example.com)] or visit [your GitHub profile].
-
