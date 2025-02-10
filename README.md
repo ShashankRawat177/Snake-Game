@@ -23,20 +23,21 @@ Implementation of the Snake Game in the C++ programming language. The game conta
 ## Installation
 
 1. Clone this repository:
-```sh
-git clone https://github.com/your-username/snake-game.git
-2. Move into the project directory:
-```sh
-cd snake-game
-```
+   ```sh
+   git clone https://github.com/your-username/snake-game.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd snake-game
+   ```
 3. Compile the program:
-```sh
-g++ -o snake SnakeGame.cpp -std=c++11
-```
+   ```sh
+   g++ -o snake SnakeGame.cpp -std=c++11
+   ```
 4. Run the game:
-```sh
-./snake
-```
+   ```sh
+   ./snake
+   ```
 
 The pre-compiled executable is uploaded on the release section of the page.
 
