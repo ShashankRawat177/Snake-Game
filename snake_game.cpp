@@ -231,20 +231,53 @@ void SnakeGame::logic() {
     }
 }
 
+void SnakeGame::Restart(){
+
+    cout << "\033[31m"; // Set text color to red
+    cout << " _______  _______  __   __  _______    _______  __   __  _______  ______      __ \n";
+    cout << "|       ||   _   ||  |_|  ||       |  |       ||  | |  ||       ||    _ |    |  |\n";
+    cout << "|    ___||  |_|  ||       ||    ___|  |   _   ||  |_|  ||    ___||   | ||    |  |\n";
+    cout << "|   | __ |       ||       ||   |___   |  | |  ||       ||   |___ |   |_||_   |  |\n";
+    cout << "|   ||  ||       ||       ||    ___|  |  |_|  ||       ||    ___||    __  |  |__|\n";
+    cout << "|   |_| ||   _   || ||_|| ||   |___   |       | |     | |   |___ |   |  | |   __ \n";
+    cout << "|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_|  |__|\n";
+    
+    cout << "\033[0m"; // Reset text color
+
+    cout << "Final Score : " << Score << endl;
+
+    cout << "Press 1 to restart.\n"
+            "Press 2 to exit.\n"
+            "Enter your choice : ";
+
+    int input;
+    cin >> input;
+    if(input == 1){
+        restart = true;
+    }else if(input == 2){
+        restart = false;
+    }
+}
+
 void SnakeGame::run() {
     hideCursor();
     MainMenu();
-    startup();
-    while (!isGameOver) {
-        draw();
-        input();
-        logic();
-        if (isGameOver) break;
-        this_thread::sleep_for(chrono::milliseconds(100));
+    restart = true;
+    while(restart){
+        
+        
+        startup();
+        while (!isGameOver) {
+            draw();
+            input();
+            logic();
+            if (isGameOver) break;
+            this_thread::sleep_for(chrono::milliseconds(100));
+        }
+        
+        cout << "\033[2J\033[H";    
+        Restart();
     }
     showCursor();
-    cout << "\033[2J\033[H";
-    cout << endl << "Game Over! Press any key to exit..." << endl;
-    _getch(); 
     exit(0);  
 }
