@@ -9,11 +9,10 @@
 #include <ctime>
 #include <string>
 
-using namespace std;
-
 class SnakeGame {
 private:
     bool isGameOver;
+    bool restart;
     int x, y, fruitx, fruity, specialAx, specialAy, specialBx, specialBy, Score;
     bool hasSpecialA, hasSpecialB;
     const int GridLength = 20;
@@ -22,8 +21,8 @@ private:
     int nTail;
     enum Direction{STOP = 0, UP, DOWN, LEFT, RIGHT};
     Direction dir;
-    mt19937 rng;  // Mersenne Twister RNG
-    uniform_int_distribution<int> distX, distY, distChance;  // Distributions
+    std::mt19937 rng;  // Mersenne Twister RNG
+    std::uniform_int_distribution<int> distX, distY, distChance;  // Distributions
 
 public:
     SnakeGame();
@@ -37,6 +36,8 @@ public:
     void input();
     void logic();
     void run();
+    void Restart();
+    void displayScore();
 };
 
 #endif // SNAKEGAME_H
