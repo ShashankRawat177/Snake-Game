@@ -17,7 +17,8 @@ Implementation of the Snake Game in the C++ programming language. The game conta
 - Special Fruit B (`G`): +40 points and lengthens by 2
 - **Wall Collision Detection**: Bouncing into the wall loses.
 - **Self-Collision Detection**: Into the snake's own tail and it's game over.
-- **Interactiv**e Main Menu
+- **Interactive** Main Menu
+- **Final Score** display and **Restart**
 
 ## Installation
 
