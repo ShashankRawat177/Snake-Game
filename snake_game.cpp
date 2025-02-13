@@ -256,6 +256,10 @@ void SnakeGame::Restart(){
         restart = true;
     }else if(input == 2){
         restart = false;
+    }else{
+        cout << "\033[2J\033[H";
+        cout << "Invalid choice..... Please enter again\n";
+        Restart();
     }
 }
 
