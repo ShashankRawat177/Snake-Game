@@ -134,7 +134,7 @@ void SnakeGame::draw() {
                         break;
                     }
                 }
-                if (!printTail) cout << " ";
+                if (!printTail) cout << "\033[38;5;8m.\033[0m";
             }
         }
         cout << endl;
@@ -211,7 +211,7 @@ void SnakeGame::logic() {
     }
 
     // Wall collision
-    if (x == 0 || x == GridWidth - 1 || y == 0 || y == GridLength - 1) {
+    if (x == 0 || x == GridWidth-1 || y == 0 || y == GridLength) {
         isGameOver = true;
     }
 
@@ -225,13 +225,13 @@ void SnakeGame::logic() {
         if (nTail > 1) nTail--;  // Ensure snake doesn't disappear
         spawnFruit();
     } else if (hasSpecialB && x == specialBx && y == specialBy) {
-        Score += 40;
+        Score += 50;
         nTail += 2;
         spawnFruit();
     }
 }
 
-void SnakeGame::Restart(){
+void SnakeGame::Restart() {
 
     cout << "\033[31m"; // Set text color to red
     cout << " _______  _______  __   __  _______    _______  __   __  _______  ______      __ \n";
@@ -252,11 +252,13 @@ void SnakeGame::Restart(){
 
     int input;
     cin >> input;
-    if(input == 1){
+    if(input == 1) {
         restart = true;
-    }else if(input == 2){
+    }
+    else if(input == 2) {
         restart = false;
-    }else{
+    }
+    else {
         cout << "\033[2J\033[H";
         cout << "Invalid choice..... Please enter again\n";
         Restart();
@@ -264,11 +266,11 @@ void SnakeGame::Restart(){
 }
 
 void SnakeGame::run() {
-    hideCursor();
+    
     MainMenu();
     restart = true;
-    while(restart){
-        
+    while(restart) {
+        hideCursor();
         
         startup();
         while (!isGameOver) {
@@ -279,9 +281,10 @@ void SnakeGame::run() {
             this_thread::sleep_for(chrono::milliseconds(100));
         }
         
-        cout << "\033[2J\033[H";    
+        cout << "\033[2J\033[H";
+        showCursor();    
         Restart();
     }
-    showCursor();
+    
     exit(0);  
 }
