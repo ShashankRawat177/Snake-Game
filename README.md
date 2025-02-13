@@ -14,7 +14,7 @@ Implementation of the Snake Game in the C++ programming language. The game conta
 - **Classic Snake Gameplay**: Control snake using `WASD` controls
 - Regular Fruit (`F`): +10 points
 - Special Fruit A (`S`): +30 points and shortens length by 1
-- Special Fruit B (`G`): +40 points and lengthens by 2
+- Special Fruit B (`G`): +50 points and lengthens by 2
 - **Wall Collision Detection**: Bouncing into the wall loses.
 - **Self-Collision Detection**: Into the snake's own tail and it's game over.
 - **Interactive** Main Menu
